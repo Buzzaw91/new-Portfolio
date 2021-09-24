@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../images/awar-meman-l-Qc9gcTTUI-unsplash.jpg'
+import image from '../images/compress-unsplash-min.jpg'
 const Home = () => {
     return (
         <main>
