@@ -11,7 +11,7 @@ const Navbar = () => {
                         to="/"
                         exact
                         activeClassName="text-white"
-                        className="inline-flex items-center py-6 px-3 mr-4 text-gray-100 hover:text-indigo-800 text-4xl font-bold cursive tracking-widest"
+                        className="inline-flex items-center py-6 px-3 mr-4 text-gray-100 hover:text-indigo-800 text-4xl font-bold cursive tracking-widest transition ease-out duration-300"
                     >
                         Aleksi
                     </NavLink>
@@ -19,21 +19,21 @@ const Navbar = () => {
                     <NavLink
                         to="/post"
                         activeClassName="text-gray-100 bg-gray-700"
-                        className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-200 hover:text-indigo-800"
+                        className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-200 hover:text-indigo-800 transition ease-out duration-300"
                     >
                         Blog Posts
                     </NavLink>
                     <NavLink
                         to="/project"
                         activeClassName="text-gray-100 bg-gray-700"
-                        className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-200 hover:text-indigo-800"
+                        className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-200 hover:text-indigo-800 transition ease-out duration-300"
                     >
                         Projects
                     </NavLink>
                     <NavLink
                         to="/about"
                         activeClassName="text-gray-100 bg-gray-700"
-                        className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-200 hover:text-indigo-800"
+                        className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-200 hover:text-indigo-800 transition ease-out duration-300"
                     >
                         About Me!
                     </NavLink>
