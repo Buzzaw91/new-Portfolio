@@ -26,12 +26,12 @@ const Project = () => {
     return (
         <main className='bg-gray-100 min-h-screen p-12'>
             <section className='container mx-auto'>
-                <h1 className='text-5xl flex justify-center cursive'>My Projects</h1>
+                <h1 className='text-7xl flex justify-center cursive'>My Projects</h1>
                 <h2 className='text-lg text-gray-600 flex justify-center mb-12'>Welcome to my projects page!</h2>
                 <section className='grid grid-cols-2 gap-8'>
                     {projectData && projectData.map((project, index) => (
-                    <article className='relative rounded-lg shadow-xl bg-white p-16 border-l-8 border-gray-300 hover:shadow-2xl hover:bg-opacity-50 transition ease-out duration-300'>
-                        <h3 className='text-gray-800 text-3xl font-bold mb-2 hover:text-indigo-700 transition ease-out duration-300'>
+                    <article className='relative rounded-lg shadow-xl bg-gradient-to-r from-white to-gray-300 p-16 border-l-8 border-gray-300 hover:shadow-2xl hover:bg-opacity-50 transition ease-out duration-300'>
+                        <h3 className='text-gray-800 text-6xl font-bold mb-2 hover:text-indigo-700 transition ease-out duration-300 cursive'>
                             <a
                             href={project.link}
                             alt={project.title}
@@ -58,12 +58,12 @@ const Project = () => {
                                 href={project.link}
                                 rel='noopener noreferrer'
                                 target='_blank'
-                                className='text-indigo-500 font-bold hover:underline hover:text-indigo-800 text-base transition ease-out duration-300'
+                                className='text-gray-500 font-bold hover:underline hover:text-indigo-800 text-base transition ease-out duration-300'
                                 >
                                     View The Project{' '}
                                     <span role='img' aria-label='right pointer'>👉</span>
                                 </a>
-                                <span className='text-indigo-500 font-bold hover:underline hover:text-indigo-800 text-base transition ease-out duration-300'>View Code</span>
+                                <span className='text-gray-500 font-bold hover:underline hover:text-indigo-800 text-base transition ease-out duration-300'>View Code</span>
                                 <SocialIcon url={project.github} className='mr-4' target='_blank' fgColor='#fff' style={{height: 35, width: 35}} />
                         </div>
                     </article>
