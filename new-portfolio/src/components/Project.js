@@ -30,8 +30,8 @@ const Project = () => {
                 <h2 className='text-lg text-gray-600 flex justify-center mb-12'>Welcome to my projects page!</h2>
                 <section className='grid grid-cols-2 gap-8'>
                     {projectData && projectData.map((project, index) => (
-                    <article className='relative rounded-lg shadow-xl bg-gradient-to-r from-white to-gray-300 p-16 border-l-8 border-gray-300 hover:shadow-2xl hover:bg-opacity-50 transition ease-out duration-300'>
-                        <h3 className='text-gray-800 text-6xl font-bold mb-2 hover:text-indigo-700 transition ease-out duration-300 cursive'>
+                    <article className='relative rounded-lg shadow-xl bg-gradient-to-r from-white to-gray-300 p-16 border-l-8 border-indigo-700 hover:shadow-2xl hover:bg-opacity-50 transition ease-out duration-300'>
+                        <h3 className='md:max-w-xs text-gray-800 text-6xl font-bold mb-2 hover:text-indigo-700 transition ease-out duration-300 cursive pb-2 transform hover:scale-105'>
                             <a
                             href={project.link}
                             alt={project.title}
@@ -51,7 +51,7 @@ const Project = () => {
                                 {capitalize(project.projectType)}
                             </span>
                             <span></span>
-                            <p className='my-6 text-lg text-gray-700 leading-relaxed'>
+                            <p className='my-8 text-lg text-gray-700 leading-relaxed'>
                                 {project.description}
                                 </p>
                                 <a
@@ -67,7 +67,7 @@ const Project = () => {
                                 href={project.github}
                                 rel='noopener noreferrer'
                                 target='_blank'
-                                className='text-gray-500 font-bold hover:underline hover:text-indigo-800 text-base transition ease-out duration-300'>View Code</a>
+                                className='text-gray-500 pl-6 font-bold hover:underline hover:text-indigo-800 text-base transition ease-out duration-300'>View Code</a>
                                 <SocialIcon url={project.github} className='mr-4' target='_blank' fgColor='#fff' style={{height: 30, width: 30}} />
                         </div>
                     </article>
