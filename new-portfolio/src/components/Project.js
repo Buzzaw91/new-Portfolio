@@ -68,7 +68,7 @@ const Project = () => {
                                 rel='noopener noreferrer'
                                 target='_blank'
                                 className='text-gray-500 font-bold hover:underline hover:text-indigo-800 text-base transition ease-out duration-300'>View Code</a>
-                                <SocialIcon url={project.github} className='mr-4' target='_blank' fgColor='#fff' style={{height: 35, width: 35}} />
+                                <SocialIcon url={project.github} className='mr-4' target='_blank' fgColor='#fff' style={{height: 30, width: 30}} />
                         </div>
                     </article>
                     ))}
