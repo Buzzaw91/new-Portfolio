@@ -24,7 +24,6 @@ export default {
                     { value: 'personal', title: 'Personal' },
                     { value: 'client', title: 'Client' },
                     { value: 'coursework', title: 'Coursework' },
-                    { value: 'trainingCourse', title: 'Training Course' },
 
             ]
             }

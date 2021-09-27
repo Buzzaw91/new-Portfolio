@@ -5,6 +5,10 @@ import sanityClient from '../client';
 const Project = () => {
     const [projectData, setProjectData] = useState(null)
 
+    const capitalize = (str) => {
+        return str.replace(/\b([a-z])/g, (w) => w.charAt(0).toUpperCase() + w.slice(1));
+    }
+
     useEffect(() => {
         sanityClient.fetch(`*[_type == 'project']{
             title,
@@ -41,7 +45,7 @@ const Project = () => {
                             </span>
                             <span>
                                 <strong className='font-bold'>Type</strong>:{' '}
-                                {project.projectType}
+                                {capitalize(project.projectType)}
                             </span>
                             <span></span>
                             <p className='my-6 text-lg text-gray-700 leading-relaxed'>
