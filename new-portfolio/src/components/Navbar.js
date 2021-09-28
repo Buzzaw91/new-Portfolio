@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <header className='bg-gray-600'>
             <div className='container mx-auto flex justify-between'>
-                <nav className="flex">
+                <nav className="flex select-none">
                     <NavLink
                         to="/"
                         exact
