@@ -2,32 +2,20 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { SocialIcon } from 'react-social-icons';
 import { MenuIcon } from '@heroicons/react/solid';
+import { Transition } from '@headlessui/react';
 
 
 const MobileNav = () => {
-    const [isNavOpen, setIsNavOpen] = useState(false);
+    const [isShowing, setIsShowing] = useState(false);
 
-    let menu = 'hidden flex container justify-between h-1/4 w-12';
-    // 'transition-transform -translate-y-full duration-200 ease-in-out';
 
-    const navToggleHandler = (e) => {
-        e.preventDefault();
-        console.log(`Before: isNavOpen: ${isNavOpen} menu: ${menu}`);
-        if (!isNavOpen) {
-            setIsNavOpen(true);
-            menu = 'flex container justify-between h-1/4 w-12'
-             console.log('After: ', isNavOpen, ' menu: ', menu)
-        } else {
-            setIsNavOpen(false);
-             menu = 'hidden flex container justify-between h-1/4 w-12';
-             console.log('After: ', isNavOpen, ' menu: ', menu)
-        }
-    }
+
 
     return (
+    <>
         <header className='bg-gray-600 overflow-x-hidden'>
             <div className='container mx-auto flex justify-between mb-4'>
-                <div onClick={(e) => navToggleHandler(e)}>
+                <div onClick={() => setIsShowing((isShowing) => !isShowing)}>
                 <MenuIcon className='h-12 w-12 mt-4 ml-10 text-indigo-100'  />
                 </div>
                 <div className='inline-flex pt-6'>
@@ -35,7 +23,21 @@ const MobileNav = () => {
                     <SocialIcon url='https://github.com/Buzzaw91' className='mr-5' target='_blank' fgColor='#fff' style={{height: 35, width: 35}} />
                 </div>
             </div>
-            <nav className={`${isNavOpen ? menu : 'flex container justify-between h-1/4 w-12' }`}>
+        </header>
+
+        <div className='bg-gray-600 z-200'>
+            <Transition as='nav'
+                className='max-width-6xl '
+                show={isShowing}
+                enter='transition-opacity duration 250'
+                enterFrom='opacity-0'
+                enterTo='opacity-100'
+                leave='transition-opacity duration 250'
+                leaveFrom='opacity-100'
+                leaveTo='opacity-0'
+                >
+            <nav
+            className='flex container justify-between'>
             <NavLink
                         to="/"
                         exact
@@ -67,7 +69,9 @@ const MobileNav = () => {
                         About Me!
                     </NavLink>
             </nav>
-        </header>
+            </Transition>
+        </div>
+    </>
      );
 }
 
