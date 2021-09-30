@@ -25,7 +25,7 @@ const MobileNav = () => {
             </div>
         </header>
 
-        <div className='bg-gray-600 z-200'>
+        <div className='bg-gray-600 z-200 overflow-x-hidden'>
             <Transition as='nav'
                 className='max-width-6xl '
                 show={isShowing}
