@@ -3,7 +3,7 @@ import Home from './components/Home'
 import About from './components/About'
 import SinglePost from './components/SinglePost'
 import Post from './components/Post'
-import Project from './components/Project'
+import ProjectsScreen from './components/ProjectsScreen'
 import ConditionalNav from './components/ConditionalNav'
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Route component={About} path='/about' />
         <Route component={SinglePost} path='/post/:slug' />
         <Route component={Post} path='/post' />
-        <Route component={Project} path='/project' />
+        <Route component={ProjectsScreen} path='/project' />
         <Route component={Home} path='/' />
       </Switch>
     </BrowserRouter>

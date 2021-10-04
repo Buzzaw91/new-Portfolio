@@ -24,10 +24,8 @@ const Project = () => {
     }, []);
 
     return (
-        <main className='bg-gray-100 min-h-screen p-12'>
-            <section className='container mx-auto'>
-                <h1 className='text-7xl flex justify-center cursive'>My Projects</h1>
-                <h2 className='text-lg text-gray-600 flex justify-center mb-12'>Welcome to my projects page!</h2>
+    <>
+
                 <section className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                     {projectData && projectData.map((project, index) => (
                     <article className='relative rounded-lg shadow-xl bg-gradient-to-r from-white to-gray-300 p-8 md:p-16 border-l-8 border-indigo-700 hover:shadow-2xl hover:bg-opacity-50 transition ease-out duration-300'>
@@ -76,8 +74,7 @@ const Project = () => {
                     </article>
                     ))}
                 </section>
-            </section>
-        </main>
+    </>
     )
 }
 
