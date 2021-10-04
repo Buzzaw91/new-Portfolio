@@ -7,7 +7,10 @@ const ProjectsScreen = () => {
     const [isShowing, setIsShowing] = useState(false);
 
     useEffect(() => {
-        setIsShowing(true);
+        setTimeout(() => {
+            setIsShowing(true);
+        }, 300)
+
     }, [])
 
     return (
