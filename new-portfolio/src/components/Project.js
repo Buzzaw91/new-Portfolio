@@ -19,7 +19,8 @@ const Project = () => {
             link,
             tags,
             github
-        }`).then((data) => setProjectData(data))
+        }`).then((data) => data.reverse())
+        .then((data) => setProjectData(data))
             .catch(console.error())
     }, []);
 
