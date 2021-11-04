@@ -6,10 +6,8 @@ const PostsScreen = () => {
     const [isShowing, setIsShowing] = useState(false)
 
     useEffect(() => {
-        setTimeout(() => {
-            setIsShowing(true);
-        }, 300)
-    }, []);
+        setIsShowing(true);
+    }, [])
 
     return (
         <main className="bg-gray-100 min-h-screen p-12">
