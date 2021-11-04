@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import sanityClient from '../client';
 import BlockContent from '@sanity/block-content-to-react';
-import bgImg from '../images/compress-unsplash-min.jpg'
+import bgImg from '../images/bg-image.jpg'
 import { urlFor } from '../utils/builder';
 
 
