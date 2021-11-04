@@ -19,6 +19,7 @@ const PostsScreen = () => {
             Welcome to my page of blog posts
             </h2>
             <Transition
+                appear={true}
                 show={isShowing}
                 enter='transition ease-in-out duration-300 transform'
                 enterFrom='translate-x-full'

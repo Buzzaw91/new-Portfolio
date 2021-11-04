@@ -19,6 +19,7 @@ const ProjectsScreen = () => {
             <h1 className='text-7xl flex justify-center cursive'>My Projects</h1>
             <h2 className='text-lg text-gray-600 flex justify-center mb-12'>Welcome to my projects page!</h2>
                 <Transition
+                    appear={true}
                     show={isShowing}
                     enter='transition ease-in-out duration-300 transform'
                     enterFrom='translate-x-full'
