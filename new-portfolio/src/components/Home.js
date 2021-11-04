@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../images/compress-unsplash-min.jpg'
+import image from '../images/bg-image.jpg'
 const Home = () => {
     return (
         <main className='z-0'>
