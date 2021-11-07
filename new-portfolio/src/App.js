@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 import SinglePost from './components/SinglePost'
@@ -8,16 +8,16 @@ import ConditionalNav from './components/ConditionalNav'
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <ConditionalNav />
-      <Switch>
-        <Route component={About} path='/about' />
-        <Route component={SinglePost} path='/post/:slug' />
-        <Route component={PostsScreen} path='/post' />
-        <Route component={ProjectsScreen} path='/project' />
-        <Route component={Home} path='/' />
-      </Switch>
-    </BrowserRouter>
+      <Routes>
+        <Route element={<About />} path='/about' />
+        <Route element={<SinglePost />} path='/post/:slug' />
+        <Route element={<PostsScreen />} path='/post' />
+        <Route element={<ProjectsScreen />} path='/project' />
+        <Route element={<Home />} path='/' />
+      </Routes>
+    </>
   );
 }
 
